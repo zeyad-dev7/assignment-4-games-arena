@@ -1,0 +1,312 @@
+:root {
+  --primary-color: #cbfe1c;
+  --color-dark: #0b0e13;
+  --color-light: #f1f1f1;
+}
+
+body {
+  font-family:
+    Chakra Petch,
+    sans-serif;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.navbar {
+  border-bottom: 1px solid oklch(27.8% 0.033 256.848);
+  background-color: var(--color-dark);
+}
+.navbar-brand {
+  color: var(--primary-color);
+}
+.drawer {
+  background-color: var(--color-dark);
+}
+.drawer-header {
+  color: var(--primary-color);
+}
+.nav-link {
+  color: #f1f1f1;
+}
+.nav-link.active {
+  color: var(--primary-color);
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+.sign-in-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--color-dark);
+  font-weight: 700;
+}
+.hero-section {
+  background-image: linear-gradient(#000000e0, #000000e0), url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 7.5rem;
+  padding-bottom: 4rem;
+}
+.watch-btn {
+  background-color: #00000000;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: all 0.15s;
+}
+.watch-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--color-dark);
+}
+.hero-img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  border-radius: 1rem;
+}
+.hero-img-tag {
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+  background-color: var(--color-dark);
+  border: 1px solid oklch(37.3% 0.034 259.733);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.carousel-button {
+  border: 2px solid oklch(37.3% 0.034 259.733);
+  color: oklch(70.7% 0.022 261.325);
+  height: 3rem;
+  background-color: #00000000;
+}
+.all-games-button {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: #00000000;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+}
+.all-games-button:hover {
+  background-color: var(--primary-color);
+  color: var(--color-dark);
+}
+.latest-games-title,
+.what-we-do-title,
+.our-team-title {
+  color: var(--primary-color);
+}
+.latest-games-title::before,
+.what-we-do-title::before,
+.our-team-title::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(50%);
+  width: 2rem;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+.latest-games-title::after,
+.what-we-do-title::after,
+.our-team-title::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(50%);
+  width: 2rem;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.section-seperator {
+  padding-bottom: 3rem;
+  position: relative;
+}
+.section-seperator::after {
+  content: "";
+  width: 80%;
+  max-width: 600px;
+  height: 2px;
+
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  background: var(--primary-color);
+}
+.sponsers-showcase {
+  background-color: var(--color-dark);
+  background-image: radial-gradient(circle at 50% 50%, #c9fe1c6b 0%, transparent 60%);
+  overflow: hidden;
+}
+
+.logo-mask-container {
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.sponser {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.offset-row {
+  transform: translateX(-45px);
+}
+
+.logo-row {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.what-we-do-containers {
+  background-color: #1a1a1a;
+  border: 1px solid oklch(27.8% 0.033 256.848);
+}
+.what-we-do-containers div {
+  height: 3rem;
+  background-color: oklch(27.8% 0.033 256.848);
+  transition: background-color 0.3s;
+}
+.what-we-do-containers div:hover {
+  background-color: var(--primary-color);
+}
+.what-we-do-containers .fa-desktop,
+.fa-cubes,
+.fa-cube,
+.fa-mobile-screen-button,
+.fa-playstation,
+.fa-vr-cardboard {
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+.what-we-do-containers .fa-desktop:hover,
+.fa-cubes:hover,
+.fa-cube:hover,
+.fa-mobile-screen-button:hover,
+.fa-playstation:hover,
+.fa-vr-cardboard:hover {
+  color: var(--color-dark);
+}
+
+.h-80 {
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+}
+.h-80::before {
+  content: "";
+  backdrop-filter: grayscale() brightness(0.9);
+  z-index: 1;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+}
+.team-member-card:hover .h-80::before {
+  transform: translateY(-100%);
+}
+.rotate-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.contact-tag {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary-color);
+}
+input,
+select,
+textarea {
+  border: 1px solid oklch(44.6% 0.03 256.802);
+  background-color: oklch(37.3% 0.034 259.733);
+  color: var(--color-light);
+}
+#newsletter {
+  border: 1px solid oklch(44.6% 0.03 256.802);
+  background-color: oklch(37.3% 0.034 259.733);
+  color: var(--color-light);
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+}
+.submit-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--color-dark);
+  padding: 1rem 1.5rem;
+  border: none;
+}
+.community-links {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-dark);
+  cursor: pointer;
+}
+.footer-links {
+  margin-right: 1rem;
+  color: oklch(70.7% 0.022 261.325);
+  cursor: pointer;
+}
+.footer-links:hover {
+  color: var(--primary-color);
+}
+.footer-content-links {
+  cursor: pointer;
+  list-style: none;
+}
+.footer-content-links:hover {
+  color: var(--primary-color);
+}
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine:before {
+  content: "";
+  background: linear-gradient(90deg, #0000, #fff6, #0000);
+  width: 100%;
+  height: 100%;
+  transition: left 0.6s;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+.btn-shine:hover:before {
+  left: 100%;
+}
+
+/*----------------------------------------------------------------*/
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    font-size: 16px;
+  }
+  .lg\:border-0 {
+    border: 0 !important;
+  }
+  .lg\:h-96 {
+    height: 24rem;
+  }
+}
